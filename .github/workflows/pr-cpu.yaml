@@ -27,10 +27,10 @@ jobs:
           pytest_markers: "not gpu"
           pytest_command: "coverage run -m pytest"
           pip_deps: "[cpu]"
-          safe_directory: RLHF
+          safe_directory: Compose-RL
     steps:
     - name: Run PR CPU Tests
-      uses: mosaicml/ci-testing/.github/actions/pytest-cpu@v0.2.2
+      uses: mosaicml/ci-testing/.github/actions/pytest-cpu@v0.3.2
       with:
         container: ${{ matrix.container }}
         name: ${{ matrix.name }}
